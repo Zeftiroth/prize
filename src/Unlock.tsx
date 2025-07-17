@@ -11,13 +11,6 @@ const Unlock = () => {
   const handleCheckCode = (result: boolean) => {
     setIsCorrect(result);
     setIsDisplay(true);
-    // if (!result) {
-    //   // Reset the error message after 5 seconds
-    //   setTimeout(() => {
-    //     setIsCorrect(false);
-    //     setIsDisplay(false);
-    //   }, 1000);
-    // }
   };
 
   const Congrats = () => {
@@ -84,7 +77,7 @@ const Unlock = () => {
       }}
     >
       {isCorrect && (
-        <Confetti width={width * 0.99 ?? 0} height={height * 0.99 ?? 0} />
+        <Confetti width={(width ?? 0) * 0.99} height={(height ?? 0) * 0.99} />
       )}
 
       <div

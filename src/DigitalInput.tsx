@@ -54,7 +54,9 @@ const DigitInput = ({ onCheckCode, isDisabled }: DigitInputProps) => {
       {[0, 1, 2, 3].map((i) => (
         <input
           key={i}
-          ref={(el) => (inputsRef.current[i] = el)}
+          ref={(el) => {
+            inputsRef.current[i] = el;
+          }}
           type="text"
           inputMode="numeric"
           pattern="[1-9]"
